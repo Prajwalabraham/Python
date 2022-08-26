@@ -24,7 +24,8 @@ File Parser is also made in a simple and minimalistic coding practice. It takes 
 
 
 Running the Tests and Program:
-	For the program, just run “python fileparse.py”
+	
+        For the program, just run “python fileparse.py”
 	For the Tests, just run “test_fileparse.py”
 
 
