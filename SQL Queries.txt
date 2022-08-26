@@ -1,0 +1,39 @@
+SQL:
+
+1. Write a query to fetch Employee name whose grade greater than 200
+
+	SELECT Name FROM Employee 
+		WHERE Grade > 200
+
+2. Write a query to fetch the department name where only male staff available
+
+	SELECT Department FROM Employee 
+		WHERE Gender = 'M'
+
+3. Write a query to fetch the second highest salaried employer.
+
+	SELECT Name, MAX(Salary) FROM Employee 
+		WHERE SALARY < (SELECT MAX(Salary) FROM Employee)
+
+4. Write a query to fetch the employ details who did not assigned with any students.
+
+	SELECT * FROM Employee E 
+		WHERE NOT EXISTS (SELECT * FROM Employee E AND Student S
+			WHERE E.Emp_Id = S.Class_Teacher_Employee_Id)
+
+				or
+	SELECT * FROM Employee E, Student S 
+		WHERE E.Emp_Id = S.Class_Teacher_Employee_Id
+
+5. Write a query to fetch the student who passed in all three subjects.
+
+	SELECT Student_id FROM Student 
+		WHERE (Subject1 = 'P' AND Subject2 = 'P' AND Subject3 = 'P')
+
+6. Write a query to fetch the top employee details where all of his students passed in the
+subjects
+ 
+	SELECT * FROM Employee WHERE
+		(Emp_Id = (SELECT Class_Teacher_Employee_Id FROM Student 
+			WHERE(Subject1 = 'P' AND Subject2 = 'P' AND Subject3 = 'P')))
+	

@@ -1,0 +1,12 @@
+DEBUG Code in line 36
+INFO Prajwal logged in
+INFO Prajwal logged in again
+ERROR I AM error
+INFO I am prajwal in the metaverse
+DEBUG Unknown access to meta
+ERROR Permission denied
+DEBUG Use Sudo
+INFO prajwal is using Sudo
+INFO Prajwal got access
+DEBUG new user created in meta
+ERROR unknown user access
